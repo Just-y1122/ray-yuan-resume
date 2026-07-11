@@ -551,3 +551,25 @@ body[data-page="home"] .hero::before {
       url('art-flower.webp') center 48% / cover no-repeat;
   }
 }
+
+
+/* ===== Local preview: hiring-focused content additions ===== */
+.focus-strip {
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px;
+  padding:18px 22px; border-radius:24px;
+  background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(255,240,247,.52));
+  border:1px solid rgba(255,255,255,.9); box-shadow:var(--glass-shadow);
+  color:var(--muted); backdrop-filter:blur(18px) saturate(1.15);
+}
+.focus-strip strong {
+  padding:9px 13px; border-radius:999px; color:var(--rose);
+  background:rgba(255,255,255,.78); border:1px solid var(--line);
+}
+.profile-copy .eyebrow { margin-bottom:18px; }
+.project-card { min-height:480px; }
+.contact-visual { min-height:440px; }
+.contact-art { width:min(280px,74%); }
+.contact-item .icon { font-weight:800; font-size:.88rem; }
+.hero-lead, .card p, .bullet-list li, .page-hero p, .section-heading p, .contact-item span { color:#5f4a55; }
+.mini-note { color:var(--muted); font-size:.94rem; line-height:1.7; }
+@media (max-width: 1000px) { .project-card { min-height:auto; } }

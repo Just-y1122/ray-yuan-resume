@@ -138,7 +138,7 @@
     showToast.timer = setTimeout(() => toast.classList.remove('show'), 1800);
   };
   document.querySelector('[data-copy-email]')?.addEventListener('click', async () => {
-    const email = '1521718888@qq.com';
+    const email = '188888888@qq.com';
     try { await navigator.clipboard.writeText(email); showToast('邮箱已复制 ♥', 'Email copied ♥'); }
     catch { showToast('复制失败，请手动复制', 'Copy failed, please copy manually'); }
   });

@@ -245,6 +245,7 @@ main { min-height: calc(100vh - var(--header-h)); }
 
 .contact-wrap { display:grid; grid-template-columns:.9fr 1.1fr; gap:26px; }
 .contact-visual { min-height:520px; display:grid; place-items:center; text-align:center; background:linear-gradient(160deg,var(--pink-100),#fff); }
+.contact-visual > div { width:100%; }
 .mail-cat { position:relative; width:220px; height:165px; margin:0 auto 24px; animation:float 4.6s ease-in-out infinite; }
 .envelope { position:absolute; left:10px; right:10px; bottom:0; height:120px; background:#fff; border:3px solid var(--pink-300); border-radius:20px; box-shadow:var(--shadow); }
 .envelope::before { content:""; position:absolute; inset:0; background:linear-gradient(145deg,transparent 49%,var(--pink-100) 50%); clip-path:polygon(0 0,100% 0,50% 65%); }
@@ -476,10 +477,10 @@ body[data-page="skills"] .page-hero::after { background-position:center 72%; }
 body[data-page="experience"] .page-hero::after { background-position:center; }
 
 .contact-art {
-  width:min(330px,80%); aspect-ratio:4/5; margin:0 auto 20px; border-radius:32px;
+  width:min(440px,92%); aspect-ratio:4/5; margin:0 auto 26px; border-radius:34px;
   background:
     linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.16)),
-    url('art-flower.webp') center/cover no-repeat;
+    url('theme.png') center bottom/contain no-repeat;
   border:1px solid rgba(255,255,255,.88);
   box-shadow:0 24px 60px rgba(164,68,114,.20), inset 0 1px 0 rgba(255,255,255,.88);
 }
@@ -535,14 +536,16 @@ body[data-page="home"] .hero::before {
 }
 
 @media (max-width: 620px) {
+  html, body { max-width:100%; overflow-x:hidden; }
+  .page-wipe,.decor-layer { width:100%; max-width:100%; overflow:hidden; }
   body[data-page="home"] .hero::before {
     top: 8px;
     bottom: 20px;
-    left: 50%;
-    right: auto;
-    width: 100vw;
-    transform: translateX(-50%);
-    border-radius: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    transform: none;
+    border-radius: 30px;
     background:
       linear-gradient(180deg,
         rgba(255,255,255,.92) 0%,
@@ -567,8 +570,8 @@ body[data-page="home"] .hero::before {
 }
 .profile-copy .eyebrow { margin-bottom:18px; }
 .project-card { min-height:480px; }
-.contact-visual { min-height:440px; }
-.contact-art { width:min(280px,74%); }
+.contact-visual { min-height:620px; }
+.contact-art { width:min(440px,92%); }
 .contact-item .icon { font-weight:800; font-size:.88rem; }
 .hero-lead, .card p, .bullet-list li, .page-hero p, .section-heading p, .contact-item span { color:#5f4a55; }
 .mini-note { color:var(--muted); font-size:.94rem; line-height:1.7; }
